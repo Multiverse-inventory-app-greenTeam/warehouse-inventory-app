@@ -14,19 +14,19 @@ const Pallet = require('./models/pallet');
 const Box = require('./models/box');
 const Employee = require('./models/employee')
 
-const initialiseDb = require('./initialiseDb');
-initialiseDb();
+// const initialiseDb = require('./initialiseDb');
+// initialiseDb();
 const port = 3000;
 const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'));
 app.use(cookieParser());
-app.use(session({
-    secret: process.env.SECRET_KEY,
-    resave: false,
-    saveUninitialized: true,
-}));
+// app.use(session({
+//     secret: process.env.SECRET_KEY,
+//     resave: false,
+//     saveUninitialized: true,
+// }));
 const handlebars = expressHandlebars({
     handlebars : allowInsecurePrototypeAccess(Handlebars)
 })
