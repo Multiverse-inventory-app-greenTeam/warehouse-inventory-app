@@ -14,8 +14,14 @@ const Pallet = require('./models/pallet');
 const Box = require('./models/box');
 const Employee = require('./models/employee')
 
-const initialiseDb = require('./initialiseDb');
-initialiseDb();
+Warehouse.hasMany(Pallet)
+
+Pallet.belongsTo(Warehouse)
+Pallet.hasMany(Box)
+Box.belongsTo(Pallet)
+Warehouse.hasMany(Employee)
+Employee.belongsTo(Warehouse)
+// await db.sync();
 const port = 3000;
 const app = express();
 app.use(express.json())
