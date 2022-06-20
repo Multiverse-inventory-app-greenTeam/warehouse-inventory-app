@@ -28,11 +28,11 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'));
 app.use(cookieParser());
-app.use(session({
-    secret: process.env.SECRET_KEY,
-    resave: false,
-    saveUninitialized: true,
-}));
+// app.use(session({
+//     secret: process.env.SECRET_KEY,
+//     resave: false,
+//     saveUninitialized: true,
+// }));
 const handlebars = expressHandlebars({
     handlebars : allowInsecurePrototypeAccess(Handlebars)
 })
