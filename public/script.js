@@ -1,14 +1,10 @@
 
-
-
-async function deleteBox(id){
-  
+async function deleteBox(id){  
     let res = await fetch(`/box/${id}` ,{
         method: 'DELETE'
     })
     console.log(res)
- 
-    
+     
 }
 async function deletePallet(id){
   

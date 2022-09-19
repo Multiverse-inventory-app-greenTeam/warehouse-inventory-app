@@ -13,11 +13,13 @@ const Warehouse = require('./models/warehouse');
 const Pallet = require('./models/pallet');
 const Box = require('./models/box');
 const Employee = require('./models/employee')
+const cors =require('cors')
 
 const initialiseDb = require('./initialiseDb');
 initialiseDb();
-const port = 3000;
+const port = 5000;
 const app = express();
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'));
@@ -40,6 +42,11 @@ app.get('/',(req,res)=>{
 app.get('/warehouses', async (req, res) => {
     const warehouses = await Warehouse.findAll();
     res.render('warehouses',{warehouses});
+    
+});
+app.get('/warehouses/jsons', async (req, res) => {
+    const warehouses = await Warehouse.findAll();
+    res.json(warehouses);
     
 });
 

@@ -1,17 +1,14 @@
 [
     {
-        "name": "NC warehouse",
+         "name": "NC warehouse",
          "location": "NC",
          "capacity": 300 ,
-        "image": "https://www.netleaseadvisor.com/wp-content/uploads/2016/09/Verizon-net-lease-investmetn-800x364.jpg",
-        "pallets": [
+         "image": "https://www.netleaseadvisor.com/wp-content/uploads/2016/09/Verizon-net-lease-investmetn-800x364.jpg",
+         "pallets": [
             {
-              
-                 "capacity_of_pallet":10,
-               
+              "capacity_of_pallet":10,               
                 "boxes": [
-                    {
-                      
+                    {                      
                         "box_name": "food"
                     }
                  

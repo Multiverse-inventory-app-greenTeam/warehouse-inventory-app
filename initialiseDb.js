@@ -3,7 +3,7 @@ const db = require('./db')
 const Pallet  = require('./models/pallet')
 const  Warehouse  = require('./models/warehouse')
 const  Box  = require('./models/box')
-const Employee = require('./models/Employee')
+const Employee = require('./models/employee')
 
 //associate models
 async function initialiseDb() {

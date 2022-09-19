@@ -72,7 +72,7 @@
 - Signup and login forms for employees
 
 
-*Images*
+*Image*
 
 <img src="https://user-images.githubusercontent.com/94479058/147260259-436197a1-b6e5-4b09-a1d6-614217d7fac1.PNG" width="360"> ERD <img src="https://user-images.githubusercontent.com/94479058/147204531-a5a832b5-2c0f-4370-9e78-958b598fbe10.png" width="360"> Sequence diagram  
 
