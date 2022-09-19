@@ -15,9 +15,21 @@ const Box = require('./models/box');
 const Employee = require('./models/employee')
 const cors =require('cors')
 
+<<<<<<< HEAD
 const initialiseDb = require('./initialiseDb');
 initialiseDb();
 const port = 5000;
+=======
+Warehouse.hasMany(Pallet)
+
+Pallet.belongsTo(Warehouse)
+Pallet.hasMany(Box)
+Box.belongsTo(Pallet)
+Warehouse.hasMany(Employee)
+Employee.belongsTo(Warehouse)
+// await db.sync();
+const port = 3000;
+>>>>>>> c038d62b74e4f106429349d7edd2ecf888eae4ff
 const app = express();
 app.use(cors())
 app.use(express.json())
@@ -25,7 +37,8 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.static('public'));
 app.use(cookieParser());
 app.use(session({
-    secret: process.env.SECRET_KEY,
+//     secret: process.env.SECRET_KEY,
+    secret:"SECRET",
     resave: false,
     saveUninitialized: true,
 }));
